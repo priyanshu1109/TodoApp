@@ -1,0 +1,28 @@
+{% extends 'todoapp/afterlogin_base.html' %}
+{% load staticfiles %}
+{% block main_block %}
+<link rel='stylesheet' type='text/css' href="{% static 'css/my_profile.css' %}">
+<div id='profile_pic'><img src="" id='prof'/></div>
+<span id='pr'>{{ user_profile.profpic }}</span>
+<span id='user_name'>{{ user_details }}</span>
+<br/><br />
+<table>
+	<tr>
+		<td>Name</td>
+		<td>{{ user_details.first_name }} {{ user_details.last_name }}</td>
+	</tr>
+	<tr>
+		<td>Email</td>
+		<td>{{ user_details.email }}</td>
+	</tr>
+	<tr>
+		<td>Mobile</td>
+		<td>{{ user_profile.mobile }}</td>
+	</tr>
+	<tr>
+		<td>City</td>
+		<td>{{ user_profile.city }}</td>
+	</tr>
+</table>
+<script src="{% static 'js/my_profile.js' %}"></script>
+{% endblock %}

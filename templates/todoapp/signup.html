@@ -1,0 +1,33 @@
+{% extends 'todoapp/base.html' %}
+
+{% block main_block %}
+{% load staticfiles %}
+<link rel='stylesheet' type='text/css' href="{% static 'css/form.css' %}">
+	<div id='login-main'>
+		<div class="login-img">
+			<img src="{% static 'images/login-img.svg' %}" alt="">
+		</div>
+		<div class='login-form'>
+			<form method='post'>
+					<h1>SignUp</h1>
+					
+					<table>
+					{{ form.as_p }}
+					{% csrf_token %}
+					<tr>
+						<td colspan='2'>
+							<div class="g-recaptcha" data-sitekey="6LcRiO8UAAAAAPq4y7m7TNkMqUx_gNwADvnNPxIc"></div>
+						</td>
+					</tr>
+					<tr>
+						<td colspan='2' align='center'>
+							{% csrf_token %}
+							<input type='submit' value='Signup' id='signup'/>
+						</td>
+					</tr>
+					</table>
+			</form>
+		</div>
+		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+	</div>
+{% endblock %}

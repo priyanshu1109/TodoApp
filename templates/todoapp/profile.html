@@ -1,0 +1,42 @@
+{% extends 'todoapp/base.html' %}
+
+{% block main_block %}
+{% load staticfiles %}
+<link rel='stylesheet' type='text/css' href="{% static 'css/form.css' %}">
+<link rel='stylesheet' type='text/css' href="{% static 'css/profile.css' %}">
+<script src="{% static 'js/profile.js' %}"></script>
+<div id='login-main'>
+		<div class="login-img">
+			<img src="{% static 'images/login-img.svg' %}" alt="">
+		</div>
+		<div class='login-form'>
+			<div id='msg'>LAST STEP!!Please Fill these mandatory fields to enjoy this website</div>
+			<form method='post' enctype='multipart/form-data'>
+					<h1 id='prof_msg'>Tell Me About Yourself {{ request.session.uname }}</h1>
+					
+					<table>
+					{{ form.as_p }}
+					{% csrf_token %}
+					<tr id='otp_row'>
+						
+						<td colspan='2' align='center'>
+							{% csrf_token %}
+							<input type='button' value='Send OTP' id='send_otp' name='otp_btn'/>
+						</td>
+						<span id='otp_box'>
+							<input type='text' maxlength='6' id='otp'>
+							<input type='button' id='sv_otp' value='Enter'/>
+						</span>
+					</tr>
+					<tr>
+						<td colspan='2' align='center'>
+							{% csrf_token %}
+							<input type='submit' value='Save' id='sv_btn'/>
+						</td>
+					</tr>
+					</table>
+			</form>
+		</div>
+</div>
+<img src = "{{uf.profpic.urls}}" />
+{% endblock %}

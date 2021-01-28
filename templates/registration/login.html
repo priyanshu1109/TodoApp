@@ -1,0 +1,28 @@
+
+{% extends 'todoapp/base.html' %}
+
+{% block main_block %}
+{% load staticfiles %}
+<link rel='stylesheet' type='text/css' href="{% static 'css/form.css' %}">
+<div id='login-main'>
+		<div class="login-img">
+			<img src="{% static 'images/login-img.svg' %}" alt="">
+		</div>
+		<div class='login-form'>
+			<form method='post'>
+					<h1>Login</h1>
+					
+					<table>
+					{{ form.as_p }}
+					{% csrf_token %}
+					<tr>
+						<td colspan='2' align='center'>
+							{% csrf_token %}
+							<input type='submit' value='Login' id="login"/>
+						</td>
+					</tr>
+					</table>
+			</form>
+		</div>
+</div>
+{% endblock %}

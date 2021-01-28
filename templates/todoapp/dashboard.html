@@ -1,0 +1,36 @@
+{% extends 'todoapp/afterlogin_base.html' %}
+
+
+
+{% block main_block %}
+{% load staticfiles %}
+	<link rel='stylesheet' type='text/css' href="{% static 'css/dashboard.css' %}">
+	<script src="{% static 'js/dashboard.js' %}"></script>
+	<!--<h1>Dashboard Page</h1>
+	<hr />-->
+	<div id='main_box'>
+		<div id='dashboard'>
+			<div id='active_div' style="width:30%;">
+				<div class='dash_title'>
+					Active Records
+				</div>
+				<div id='active_recs'>	
+				</div>
+			</div>
+			<div id='share_todos'>
+				<div class='dash_title'>
+					Share Todos
+				</div>
+				<div id='shared_recs'>		
+				</div>
+			</div>
+			<div id='invites'>
+				<div class='dash_title'>
+					New Invites
+				</div>
+				<div id='new_invites'>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

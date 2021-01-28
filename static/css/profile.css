@@ -1,0 +1,19 @@
+#sv_btn{
+	display:block;
+}
+
+#otp_box{
+	display:none;
+}
+
+#send_otp{
+	display:none;
+}
+
+#msg{
+	height:40px;
+	background-color:#bbffbb;
+	color:green;
+	text-align:center;
+	width:65%;
+}

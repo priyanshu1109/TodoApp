@@ -1,0 +1,13 @@
+{% extends 'todoapp/base.html' %}
+
+{% block menu_block %}
+{% load staticfiles %}
+<link rel='stylesheet' type='text/css' href="{% static 'css/common.css' %}">
+{% with request.resolver_match.url_name as url_name %}
+<div id='menu'>
+	<a href='/todoapp/dashboard' class="{% if request.path == '/todoapp/dashboard' or request.path == '/todoapp/dashboard/' %}active{% endif %}">Dashboard</a>&nbsp;&nbsp;
+	<a href='/todoapp/showtodos' class="{% if request.path == '/todoapp/showtodos' or request.path == '/todoapp/showtodos/' %}active{% endif %}">Show Todos</a>&nbsp;&nbsp;
+	<a href='/todoapp/connects' class="{% if request.path == '/todoapp/connects' or request.path == '/todoapp/connects/' %}active{% endif %}">Connects</a>&nbsp;&nbsp;
+</div>
+{% endwith %}
+{% endblock %}

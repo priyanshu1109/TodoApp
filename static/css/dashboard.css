@@ -1,0 +1,127 @@
+#main_table{
+	margin-top:10px;
+	height:480px;
+	background-color:#ceceff;
+	border:1px solid blue;
+}
+
+#dashboard{
+	/*display:inline;*/
+	width:100%;
+	height:auto;
+	margin:1px solid red;
+}
+
+#active_div{
+	float:left;
+	margin-left:20px;
+	margin-top:10px;
+	height:500px;
+	background-color:#161616;
+	width:30%;
+	border-radius:5px;
+}
+
+#share_todos{
+	float:left;
+	margin-top:10px;
+	margin-left:20px;
+	height:500px;
+	background-color:#161616;
+	width:30%;
+	border-radius:5px;
+}
+
+#invites{
+	float:left;
+	margin-left:20px;
+	margin-top:10px;
+	height:500px;
+	background-color:#161616;
+	width:30%;
+	border-radius:5px;
+}
+
+table{
+	border:1px solid #f8f8f8;
+	width:100%;
+}
+
+td{
+	vertical-align:top;
+	border-right:1px solid blue;
+	width:33%;
+}
+
+.dash_title{
+	background-color:#ff8102;
+	color:white;
+	font-weight:bold;
+	font-size:18px;
+	padding:5px 12px;
+	text-align:center;
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+}
+
+#active_recs{
+}
+
+.active_box{
+	border:1px solid #3b3b3b;
+	border-radius:5px;
+	position:relative;
+	display:block;
+	width:85%;
+	height:80px;
+	padding:5px 15px;
+	margin-top:20px;
+	margin:10px auto;
+	color:#ff8000;
+	background-color:#3b3b3b;
+}
+
+.acttyp{
+	height:70px;
+	float:left;
+	padding:5px;
+	border-radius:50px;
+	border-color:1px solid #f77b00;
+	box-shadow: 1px 1px 0.5px 0.5px #ff9224;
+}	
+
+.actttl{
+	display:block;
+	font-weight:bold;
+	color:black;
+	font-size:18px;
+	width:100%;
+	margin-left:100px;
+	color:#f77b00;
+	margin-top:20px;
+}
+
+.actcrt{
+	display:block;
+	/*margin-top:22px;*/
+	font-weight:bold;
+	color:black;
+	font-size:14px;
+	margin-left:100px;
+	color:#f77b00;
+}
+
+.actcrti{
+	display:block;
+	margin-top:5px;
+	font-weight:bold;
+	color:black;
+	font-size:14px;
+}
+
+.actmore{
+	display:block;
+	padding:20px 10px;
+	text-align:right;
+	font-size:14px;
+}

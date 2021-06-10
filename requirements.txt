@@ -1,6 +1,6 @@
 cachetools==4.0.0
 decorator==4.4.0
-Django==2.0
+Django==2.2.24
 docutils==0.15.2
 enum34==1.1.6
 fastcache==1.1.0
